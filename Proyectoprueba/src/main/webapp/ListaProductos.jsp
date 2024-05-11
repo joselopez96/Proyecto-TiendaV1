@@ -47,7 +47,7 @@
                 <td><%= p.getStock()%></td>
                 <td><%= p.getFechaing()%></td>
                 <td><%= p.getFechacad()%></td>
-                <td><img src="<%= p.getRutaimg()%>" alt="alt"/></td>
+                <td><img width="100" height="100" src="./img/<%=p.getRutaimg() %>" alt="alt"/></td>
                 <td><%= p.getEstado()%></td>
                 <td><%= p.getIdcategoria()%></td>
                 <%
