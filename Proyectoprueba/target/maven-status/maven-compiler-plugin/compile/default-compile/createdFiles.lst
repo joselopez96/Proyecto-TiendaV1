@@ -1,0 +1,11 @@
+ModelPrimary\ProductoCategory.class
+Controller\DaoProducto.class
+model\Producto.class
+Conexion\ConexionSQL.class
+Servlet\Controllerlogin.class
+Controller\DaoCliente.class
+com\mycompany\proyectoprueba\JakartaRestConfiguration.class
+model\Cliente.class
+ModelPrimary\Roles.class
+com\mycompany\proyectoprueba\resources\JakartaEE91Resource.class
+Services\DAOinterface.class
