@@ -14,27 +14,31 @@ import java.sql.Statement;
  * @author Usuario
  */
 public class ConexionSQL {
-    private String URL="jdbc:sqlserver://localhost:1433;database=proyectoVenta1;";
-    private String USER="sa";
-    private String PASSWORD="admin123";
-    Connection conn=null;
-    public Connection EstablecerConexion()
+    public static Connection EstablecerConexion()
     {
+            String url="jdbc:sqlserver://localhost:1433;" +
+			"database=proyectoVenta1;user=sa; password=admin123;loginTimeout=30;encrypt=true;trustServerCertificate=true";
         try {
-            
-            conn=DriverManager.getConnection(URL, USER, PASSWORD);
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection conn=DriverManager.getConnection(url);
+            System.out.println("conexion exitossa");
+            return conn;
             //Statement stm=conn.createStatement();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println(e.toString());
+            return null;
         }
-        return conn;
+        
     }
-    public void desconectar(){
+    /*public void desconectar(){
         try {
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    }*/
+    /*public static void main(String[] args) {
+        ConexionSQL.EstablecerConexion();
+    }*/
     
 }
