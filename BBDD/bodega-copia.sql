@@ -302,12 +302,14 @@ as select *from productos
 go
 
 execute sp_crear_catpro 'limpieza'
+go
+execute sp_crear_pro'Lejia clorox 50mml','Producto para ropa blanca',4.5,10,'05/30/2024','12/30/2024'
+,'C:\Users\Usuario\Documents\NetBeansProjects\Proyectoprueba\src\main\webapp\img\clorox.jpg',1,'cp000001'
+go
 select *from catproducto
 select *from productos
-
-select COLUMN_NAME
+/*select COLUMN_NAME
   from INFORMATION_SCHEMA.COLUMNS
  where TABLE_SCHEMA = 'dbo'
    and TABLE_NAME = 'productos'
- order by ORDINAL_POSITION
- update productos set rutaimg='C:\Users\Usuario\Documents\NetBeansProjects\Proyectoprueba\src\main\webapp\img\clorox.jpg' where idprod='pr000001'
+ order by ORDINAL_POSITION*/
