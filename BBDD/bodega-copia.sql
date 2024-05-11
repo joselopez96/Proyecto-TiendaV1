@@ -304,7 +304,7 @@ go
 execute sp_crear_catpro 'limpieza'
 go
 execute sp_crear_pro'Lejia clorox 50mml','Producto para ropa blanca',4.5,10,'05/30/2024','12/30/2024'
-,'C:\Users\Usuario\Documents\NetBeansProjects\Proyectoprueba\src\main\webapp\img\clorox.jpg',1,'cp000001'
+,'clorox.jpg',1,'cp000001'
 go
 select *from catproducto
 select *from productos
